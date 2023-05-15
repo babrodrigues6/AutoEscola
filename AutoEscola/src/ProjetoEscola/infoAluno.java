@@ -2,6 +2,8 @@ package ProjetoEscola;
 
 import javax.swing.JOptionPane;
 
+import cadAluno.Aluno;
+
 public class infoAluno {
 	
 	public static void main(String[] args) {
@@ -23,13 +25,18 @@ public class infoAluno {
 		Aluno aluno1 = new Aluno();
 		aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade));
+		aluno1.setEmail(email);
+		aluno1.setCelular(celular);
+		aluno1.setEndereco(endereco);
+		aluno1.setCpf(cpf);
+		aluno1.setRg(rg);
 		aluno1.setDataNascimento(dataNascimento);
-		aluno1.setRegistroGeral(registroGeral);
-		aluno1.setNumeroCpf(numeroCpf);
+		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setNomeMae(nomeMae);
 		aluno1.setNomePai(nomePai);
-		aluno1.setDataMatricula(dataMatricula);
-		aluno1.setAltura(Double.parseDouble(altura));*/
+		
+		
+		
 	
 	
 	
