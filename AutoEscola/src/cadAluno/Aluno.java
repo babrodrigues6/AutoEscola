@@ -96,6 +96,7 @@ public class Aluno {
 		this.nomePai = nomePai;
 		
 		
+
 	}
 	@Override
 	public int hashCode() {
@@ -108,7 +109,7 @@ public class Aluno {
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((endereco == null) ? 0 : endereco.hashCode());
 		result = prime * result + idade;
-		result = prime * result + ((materia == null) ? 0 : materia.hashCode());
+		result = prime * result + ((materias == null) ? 0 : materias.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		result = prime * result + ((nomeMae == null) ? 0 : nomeMae.hashCode());
 		result = prime * result + ((nomePai == null) ? 0 : nomePai.hashCode());
@@ -156,10 +157,10 @@ public class Aluno {
 			return false;
 		if (idade != other.idade)
 			return false;
-		if (materia == null) {
-			if (other.materia != null)
+		if (materias == null) {
+			if (other.materias != null)
 				return false;
-		} else if (!materia.equals(other.materia))
+		} else if (!materias.equals(other.materias))
 			return false;
 		if (nome == null) {
 			if (other.nome != null)
@@ -187,8 +188,10 @@ public class Aluno {
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", email=" + email + ", celular=" + celular + ", endereco="
 				+ endereco + ", cpf=" + cpf + ", rg=" + rg + ", dataNascimento=" + dataNascimento + ", dataMatricula="
-				+ dataMatricula + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai + ", materia=" + materia + "]";
+				+ dataMatricula + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai + ", materias=" + materias + "]";
 	}
+	
+	
 	
 	
 	
