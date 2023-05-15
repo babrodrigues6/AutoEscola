@@ -1,5 +1,8 @@
 package cadAluno;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aluno {
 	
 	String nome;
@@ -15,9 +18,17 @@ public class Aluno {
 	String nomePai;
 	
 	
+	private List<Materia> materias = new ArrayList<Materia>();
+	
+
 	
 	
-	
+	public List<Materia> getMaterias() {
+		return materias;
+	}
+	public void setMaterias(List<Materia> materias) {
+		this.materias = materias;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -97,6 +108,7 @@ public class Aluno {
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((endereco == null) ? 0 : endereco.hashCode());
 		result = prime * result + idade;
+		result = prime * result + ((materia == null) ? 0 : materia.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		result = prime * result + ((nomeMae == null) ? 0 : nomeMae.hashCode());
 		result = prime * result + ((nomePai == null) ? 0 : nomePai.hashCode());
@@ -144,6 +156,11 @@ public class Aluno {
 			return false;
 		if (idade != other.idade)
 			return false;
+		if (materia == null) {
+			if (other.materia != null)
+				return false;
+		} else if (!materia.equals(other.materia))
+			return false;
 		if (nome == null) {
 			if (other.nome != null)
 				return false;
@@ -166,13 +183,14 @@ public class Aluno {
 			return false;
 		return true;
 	}
-	
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", email=" + email + ", celular=" + celular + ", endereco="
 				+ endereco + ", cpf=" + cpf + ", rg=" + rg + ", dataNascimento=" + dataNascimento + ", dataMatricula="
-				+ dataMatricula + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai + "]";
+				+ dataMatricula + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai + ", materia=" + materia + "]";
 	}
+	
+	
 	
 	
 	

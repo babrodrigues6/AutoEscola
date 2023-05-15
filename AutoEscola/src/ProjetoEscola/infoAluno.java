@@ -6,6 +6,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import cadAluno.Aluno;
+import cadAluno.Materia;
 
 public class infoAluno {
 	
@@ -43,8 +44,22 @@ public class infoAluno {
 		aluno1.setNomeMae(nomeMae);
 		aluno1.setNomePai(nomePai);
 		
+		for (int posi = 1 ;posi <= 4; posi++) {
+			String nomeMateria = JOptionPane.showInputDialog("Qual é a matéria"+posi+"?");
+			String nomeNota = JOptionPane.showInputDialog("Qual a nota" +posi+ "?");
+			
+			Materia materia = new Materia ();
+			materia.setMateria(nomeMateria);
+			materia.setNota(Double.valueOf(nomeNota));
+			
+			aluno1.getMaterias().add(materia);
 		
 		
+		
+		
+		
+		
+		}
 	
 		}
 	
