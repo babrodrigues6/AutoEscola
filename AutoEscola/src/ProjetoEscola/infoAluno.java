@@ -1,5 +1,8 @@
 package ProjetoEscola;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import cadAluno.Aluno;
@@ -8,6 +11,11 @@ public class infoAluno {
 	
 	public static void main(String[] args) {
 		
+		List<Aluno> alunos = new ArrayList<Aluno>();
+		
+		for (int qtd = 1 ; qtd <= 2 ; qtd++) {
+			
+	
 		
 		
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
@@ -38,7 +46,7 @@ public class infoAluno {
 		
 		
 	
-	
+		}
 	
 	
 	}
